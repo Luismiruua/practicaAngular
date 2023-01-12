@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [];
+import { ArbolComponent} from 'src/app/arbol/arbol.component'
+const routes: Routes = [
+  {path:'arbol',
+  component:ArbolComponent},
+  {path:'arboles',
+  component:ArbolComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

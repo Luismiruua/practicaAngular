@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">Árbol para introducir en el inventario</h1>
+
+<app-arbol></app-arbol>
+
+<h1 style="text-align: center;">Arboles en el inventario</h1>
+<table class="hover" border="1" style="margin: 0 auto;">
+    <thead>
+        <tr style="background-color: blueviolet; color: blanchedalmond;">
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Favorito</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <div class="arboles">
+            <!--"[class.favorito]arbol"-->
+        </div>
+        <tr *ngFor="let arbol of Arboles ">
+            <td>{{arbol.nombreArb}}</td>
+            <td>{{arbol.tipo}}</td>
+            <td><input type="button" value="FAVORITO" (click)="marcar(arbol)"></td>
+            <td><input type="button" value="ELIMINAR" (click)="eliminar(arbol)"></td>
+        </tr>
+    </tbody>
+</table>

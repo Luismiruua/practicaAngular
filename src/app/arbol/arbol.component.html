@@ -1,0 +1,45 @@
+<!--style="text-align: center;"-->
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+        
+</head>
+<body>
+    <!---->
+    <form (submit)="guardar2()" >
+        <!--formArrayName="guardarArray"-->
+        <div style="text-align: center;">
+            Introduce el nombre: 
+
+            <input type="text" name="nombreArb" [(ngModel)]="nombreArb">    
+            <!--<input type="button" name="guar" value="Dale!" (click)="guardar(nombreArb.value)">-->
+            <br/>
+            <br/>
+
+            <!--
+                <ul *ngFor="let tipo of tipos">
+                <li (click)="ponerElTipo(tipo)" [ngClass]="{'selected':tipo === opcTipo}">{{tipo}}</li>
+            </ul>
+            -->
+            <label for="tipoArb">Elija entre Árbol o Arbusto</label>
+            <br>           
+            <input type="radio" name="tipo" id="tipoArb" [(ngModel)]="opcTipo"  value="Arbol">Árbol
+            <input type="radio" name="tipo" id="tipoArb" [(ngModel)]="opcTipo"  value="Arbusto">Arbusto
+            <br>
+                
+                <!--<p>{{guardado}}</p>-->
+
+            <br/>
+        
+            <br/>
+            <button type="submit" class="cambClr">ACEPTAR</button>
+            <input type="reset" name="borrar" value="DENEGAR">
+        </div>
+
+
+        
+    </form>
+
+
+</body>
+
+
