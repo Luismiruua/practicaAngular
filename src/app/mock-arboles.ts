@@ -1,6 +1,6 @@
-import { Arbol } from "./Arbol";
+import { Arbol } from "./arbol";
 
-export const arboles:Arbol[]=[
+export const arboles:Arbol[]=[];
 
     /**
     {nombreArb:"Manzano", tipo: 'Arbol', favorito: false},
@@ -13,4 +13,3 @@ export const arboles:Arbol[]=[
      */
 
 
-];

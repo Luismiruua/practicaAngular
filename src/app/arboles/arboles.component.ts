@@ -1,5 +1,5 @@
-import  { Component, OnInit, TemplateRef, ViewChild } from "@angular/core";
-import { Arbol } from "../Arbol";
+import  { Component, OnInit } from "@angular/core";
+import { Arbol } from "../arbol";
 import { arboles } from '../mock-arboles';
 
 @Component({
@@ -10,26 +10,23 @@ import { arboles } from '../mock-arboles';
 
 })
 export class ArbolesComponent implements OnInit{
-rows = [];
-    columns =[]; //[{ prop: 'name' }, { name: 'Gender' }, { name: 'Company', sortable: false }];
+    nmbArb?: String;
+    tipo?: String;
   
     constructor() {
       
     }
+    
     ngOnInit(): void {
 
     }
-  
-   
-    Arboles? = arboles;
 
-    eliminar(arbol: Arbol): void{
-        //console.log()
-        //this.arboles.eliminar(arboles.)
+    Arboles = arboles;
+
+    public borradi(arbol:Arbol) :void{
+        this.Arboles = this.Arboles.filter(arrayArboles => arrayArboles !== arbol);
     }
-    marcar(arbol: Arbol): void{
-
+    public marcadi(favorito:boolean, arbol:Arbol): void{
+        //this.Arboles?.find(arrayArbol => arrayArbol === arbol).favorito = favorito;
     }
-    
-
 }
